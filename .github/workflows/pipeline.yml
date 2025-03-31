@@ -9,7 +9,9 @@ jobs:
   # 1st job
   infrastructure:
     runs-on: ubuntu-latest
-    working-directory: infrastructure-pipeline-cicd
+    defaults:
+      run:
+        working-directory: infrastructure_pipeline_cicd
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
